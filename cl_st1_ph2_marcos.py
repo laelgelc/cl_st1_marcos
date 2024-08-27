@@ -19,9 +19,8 @@ for element in soup.find_all(['w', 'c']):
         seg_vici_morph = ''
         seg_text = ''
     rows.append([lemma, word_type, text, seg_function, seg_type, seg_vici_morph, seg_text])
-    df = pd.DataFrame(rows, columns=['lemma', 'type', 'text', 'seg function', 'seg type', 'seg vici:morph', 'seg text'])
-    df.dtypes
-    df
-    df.to_json('vuam_test.jsonl', orient='records', lines=True)
-    df.to_csv('vuam_test.tsv', sep='\t', index=False, encoding='utf-8', lineterminator='\n')
-    
+df = pd.DataFrame(rows, columns=['lemma', 'type', 'text', 'seg function', 'seg type', 'seg vici:morph', 'seg text'])
+df.dtypes
+df
+df.to_json('vuam_test.jsonl', orient='records', lines=True)
+df.to_csv('vuam_test.tsv', sep='\t', index=False, encoding='utf-8', lineterminator='\n')
